@@ -29,6 +29,7 @@ public class listFamiliarity {
         //User enters integers, once the limit has been reached, it proceeds to the next step
         System.out.print("Enter Values(Integers): ");
         //Creates two Arraylists, 1 for Integer and 1 for String
+        
         List < Integer > values = new ArrayList < Integer > ();
         List < String > values2 = new ArrayList < String > ();
 
@@ -41,12 +42,17 @@ public class listFamiliarity {
         //sort is then used to sort the integers from lowest to highest
         Collections.sort(values);
 
+        System.out.print("Enter a limit (String you want entered): ");
+        //This limit is then added to the variable "limit"
+        int limit2 = input.nextInt();
+        
         //The program then prompts the end user to enter a set of string values
         System.out.print("Enter Names: ");
+        String z = input.nextLine();
 
         //This loop is used to enter the number of string values corresponding to the limit entered by the end user
-        for (int i = 0; i < limit; i++) {
-            String z = input.nextLine();
+        for (int i = 0; i < limit2; i++) {
+             z = input.nextLine();
             values2.add(z);
         }
 
@@ -60,6 +66,8 @@ public class listFamiliarity {
         for (String y: values2) {
             System.out.println(y);
         }
+        
+    
 
     }
 
