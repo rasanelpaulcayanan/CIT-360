@@ -28,24 +28,19 @@ public class lotteryResults {
         while (!isValid) {
      try {
 	
-    //Use runnables to execute 3 classes.
-    Runnable result1 =  new firstState();
-    Runnable result2 = new secondState();
-    Runnable result3 = new thirdState();
-    
+
     //Creates thread objects
-    Thread show1 = new Thread(result1);
-	Thread show2 = new Thread(result2);	
-	Thread show3 = new Thread(result3);
+    Thread show1 = new Thread( new lotteryClass ("California "));
+    Thread show2 = new Thread( new lotteryClass ("Idaho "));	
+    Thread show3 = new Thread( new lotteryClass ("Maine "));
     
-	//Executes the specif thread object selected
-	ExecutorService executorService = Executors.newSingleThreadExecutor();
 	
 	System.out.print("Which Lottery Results do you want to Display:\n");
 	System.out.print("Press 1 for California 5 numbers!\n");
 	System.out.print("Press 2 for Idaho 4 numbers!\n");
 	System.out.print("Press 3 for Maine 3 numbers!\n");
 	System.out.print("Press 4 for All States\n");
+	System.out.print("Press 5 to exit\n");
 	System.out.print("\nWARNING! You can only select from the options above: ");
 	
 	//Switch utilized to provide options for end user.
@@ -53,26 +48,27 @@ public class lotteryResults {
     switch (choice) {
     
     case 1:
-    	executorService.execute(show1);
-    	executorService.shutdown();
+    	show1.start();
         break;
     case 2:
-    	executorService.execute(show2);
-    	executorService.shutdown();
-        break;
+    	show2.start();
+    	break;
     case 3:
-    	executorService.execute(show3);
-    	executorService.shutdown();
-        break;
+    	show3.start();
+    	break;
         
     case 4:
-    	executorService.execute(show1);
+    	show1.start();
     	try {Thread.sleep(5000);} catch (Exception e) {}
-    	executorService.execute(show2);
+    	show2.start();
     	try {Thread.sleep(5000);} catch (Exception e) {}
-    	executorService.execute(show3);
-    	executorService.shutdown();
-        break;
+    	show3.start();
+    	break;
+        
+    case 5:
+    	System.out.print("Thank you for trying!\n");
+    	break;
+    	
     default:
     	System.out.print("You did not select from the choices above!\n");
     	continue;
