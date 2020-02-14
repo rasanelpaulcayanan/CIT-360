@@ -30,7 +30,7 @@ public class lotteryResults {
         while (!isValid) {
      try {
 	
-
+    //test changes
     //Creates thread objects
     Thread show1 = new Thread( new lotteryClass ("California "));
     Thread show2 = new Thread( new lotteryClass ("Idaho "));	
