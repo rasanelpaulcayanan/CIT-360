@@ -39,29 +39,36 @@ public class lotteryResults {
     
 	
 	System.out.print("Which Lottery Results do you want to Display:\n");
-	System.out.print("Press 1 for California 5 numbers!\n");
-	System.out.print("Press 2 for Idaho 4 numbers!\n");
-	System.out.print("Press 3 for Maine 3 numbers!\n");
-	System.out.print("Press 4 for All States\n");
-	System.out.print("Press 5 to exit\n");
-	System.out.print("Press 6 to generate random lottery numbers\n");
+	System.out.print("Press 1 to see Government Warning!\n");
+	System.out.print("Press 2 for California 5 numbers!\n");
+	System.out.print("Press 3 for Idaho 4 numbers!\n");
+	System.out.print("Press 4 for Maine 3 numbers!\n");
+	System.out.print("Press 5 for All States\n");
+	System.out.print("Press 6 to exit\n");
+	System.out.print("Press 7 to generate random lottery numbers\n");
 	System.out.print("\nWARNING! You can only select from the options above: ");
 	
 	//Switch utilized to provide options for end user.
     int choice = input.nextInt();
     switch (choice) {
     
-    case 1:
+    case 1:  individualThread t1 = new individualThread();
+    t1.start();
+    break;
+    
+    case 2:
     	show1.start();
         break;
-    case 2:
+    case 3:
     	show2.start();
     	break;
-    case 3:
+    case 4:
     	show3.start();
     	break;
+    	
+    
         
-    case 4:
+    case 5:
     	show1.start();
     	try {Thread.sleep(5000);} catch (Exception e) {}
     	show2.start();
@@ -69,11 +76,11 @@ public class lotteryResults {
     	show3.start();
     	break;
         
-    case 5:
+    case 6:
     	System.out.print("Thank you for trying!\n");
     	break;
     	
-    case 6:
+    case 7:
     	ExecutorService executor = Executors.newFixedThreadPool(10);
     	
     	for (int i = 0; i < 10 ; i++ ) {
