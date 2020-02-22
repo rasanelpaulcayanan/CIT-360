@@ -39,6 +39,8 @@ public class httpURLFamiliarityReview {
         switch (option) {
 
             case 1:
+            	
+            	try {
             	// URL = stores the web site the Java Program is supposed to go to
                 URL theWebPage = new URL("https://rasanelpaulyanan.github.io/lesson2/design-principles.html");
 
@@ -64,11 +66,20 @@ public class httpURLFamiliarityReview {
                 //Closes the connection
                 getData.close();
 
-                break;
+                break;}
+            	
+            	catch(Exception e) {
+                	System.out.println("The website did not give a response. Please try the following:");
+                	System.out.println("The website is down, please try the following");
+                	System.out.println("1. Check your connection to the Internet.");
+                	System.out.println("2. Make sure your URL is correct.");
+                }
 
             //The same codes are used for case 2 to 5, but with different websites.
             case 2:
-                URL theWebPage2 = new URL("https://rasanelpaulcayanan.github.io/lesson3/index.html");
+                try {
+            	
+            	URL theWebPage2 = new URL("https://rasanelpaulcayanan.github.io/lesson3/index.html");
 
                 HttpURLConnection connectURL2 = (HttpURLConnection) theWebPage2.openConnection();
 
@@ -90,10 +101,18 @@ public class httpURLFamiliarityReview {
 
 
                 getData2.close();
+                }
+                catch(Exception e) {
+                	System.out.println("The website did not give a response. Please try the following:");
+                	System.out.println("The website is down, please try the following");
+                	System.out.println("1. Check your connection to the Internet.");
+                	System.out.println("2. Make sure your URL is correct.");
+                }
                 break;
 
             case 3:
-                URL theWebPage3 = new URL("https://rasanelpaulcayanan.github.io/lesson4/preston-4.html");
+                try {
+            	URL theWebPage3 = new URL("https://rasanelpaulcayanan.github.io/lesson4/preston-4.html");
 
                 HttpURLConnection connectURL3 = (HttpURLConnection) theWebPage3.openConnection();
 
@@ -114,10 +133,17 @@ public class httpURLFamiliarityReview {
                 }
 
 
-                getData3.close();
+                getData3.close();}
+                catch(Exception e) {
+                	System.out.println("The website did not give a response. Please try the following:");
+                	System.out.println("The website is down, please try the following");
+                	System.out.println("1. Check your connection to the Internet.");
+                	System.out.println("2. Make sure your URL is correct.");
+                }
                 break;
 
             case 4:
+            	try {
                 URL theWebPage4 = new URL("https://rasanelpaulcayanan.github.io/lesson5/preston-5.html");
 
                 HttpURLConnection connectURL4 = (HttpURLConnection) theWebPage4.openConnection();
@@ -139,10 +165,17 @@ public class httpURLFamiliarityReview {
                 }
 
 
-                getData4.close();
+                getData4.close();}
+                catch(Exception e) {
+                	System.out.println("The website did not give a response. Please try the following:");
+                	System.out.println("The website is down, please try the following");
+                	System.out.println("1. Check your connection to the Internet.");
+                	System.out.println("2. Make sure your URL is correct.");
+                }
                 break;
 
             case 5:
+            	try {
                 URL theWebPage5 = new URL("https://rasanelpaulcayanan.github.io/lesson6/preston-6.html");
 
                 HttpURLConnection connectURL5 = (HttpURLConnection) theWebPage5.openConnection();
@@ -161,10 +194,18 @@ public class httpURLFamiliarityReview {
                 }
 
 
-                getData5.close();
+                getData5.close();}
+                catch(Exception e) {
+                	System.out.println("The website did not give a response. Please try the following:");
+                	System.out.println("The website did not give a response. Please try the following:");
+                	System.out.println("The website is down, please try the following");
+                	System.out.println("1. Check your connection to the Internet.");
+                	System.out.println("2. Make sure your URL is correct.");
+                }
                 break;
 
 
+           
             case 6:
                 System.out.println("Your pressed Exit, no code will be showm. Thank you! Goodbye!");
                 break;

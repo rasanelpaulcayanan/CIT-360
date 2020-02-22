@@ -19,25 +19,17 @@ public class MoneyChangerModel {
 	private int convertedValue;
 	
 	//This class gets 2 inputs the peso value and denomination. The peso value
-	//is converted to either Dollars or Yen. The denomination value gives the user 
-	//an option to press 1 and convert to dollar and 2 to convert to yen
+	//is converted to either Dollars or Euro. The denomination value gives the user 
+	//an option to press 1 and convert to dollar and 2 to convert to euros
 	   public void convertMoney (int pesoValue, int denomination) {
 		   
-		    switch (denomination) {
-		    
-		    case 1:
-		    	 convertedValue = pesoValue / 50 ;
-		        break;
-		        
-		    case 2:
-		    	 convertedValue = pesoValue *2;
-		        break;
+		   int selector = denomination - 1;
 		   
-		    default:
-		    	System.out.print("You did not select from the choices above!\n");
-		    	
-		    	
-		    }
+		int[] moneyType = {50, 55};
+		
+		 convertedValue = pesoValue * moneyType[selector];
+		   
+		      
 		    
 	   }
 	

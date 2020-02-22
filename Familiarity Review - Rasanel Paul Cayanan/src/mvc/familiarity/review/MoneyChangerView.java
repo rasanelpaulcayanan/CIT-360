@@ -22,9 +22,10 @@ public class MoneyChangerView extends JFrame {
 	
 	private JLabel pesoLabel = new JLabel("Php");
 	private JTextField pesoValue = new JTextField(10);
-	private JLabel denominationLabel = new JLabel("1 = $ , 2 = ¥");
+	private JLabel denominationLabel = new JLabel("1 = $ , 2 = €");
 	private JTextField denomination = new JTextField(10);
     private JButton convertButton = new JButton("Convert");
+   
     private JTextField convertedValue = new JTextField(10);
     
     

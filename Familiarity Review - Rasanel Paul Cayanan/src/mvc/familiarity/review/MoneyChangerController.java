@@ -48,8 +48,13 @@ public class MoneyChangerController {
 			
 			catch(NumberFormatException ex) {
 				
-				theView.displayErrorMessage("You need to enter two Integerts");
+				theView.displayErrorMessage("You need to enter two Integers");
 				
+			}
+			
+			catch(ArrayIndexOutOfBoundsException ex ) {
+				
+				theView.displayErrorMessage("Please select either 1 for Dollar and 2 for Euros");
 			}
 		}
 		 
